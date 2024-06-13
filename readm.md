@@ -91,13 +91,12 @@ JSON
 
 Request Body:
 
-   ```bash
-JSON
-{
-    "username": "your_username",
-    "password": "your_password"
-}
-
+   ```
+   {
+       "username": "your_username",
+       "password": "your_password"
+   }
+   ```
 
 Response:
 
