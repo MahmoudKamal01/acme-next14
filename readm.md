@@ -41,7 +41,7 @@ Configuration
    GEMINI_API_KEY=your_google_cloud_api_key
    ```
 
-Important:
+# Important:
 
 ACCESS_TOKEN_SECRET: A secret key used for signing JWT tokens for user authentication. Choose a strong and unique key.
 MONGO_URI: The connection string for your MongoDB database.
@@ -55,16 +55,20 @@ Set up a MongoDB database instance and configure the MONGO_URI environment varia
 Running the Application
 Start the development server:
 
-   ```bash
+   ```
 npm start   # or yarn start
+ ```
+
 Use code with caution.
 content_copy
 This will start the Node.js server and listen for incoming requests on the default port (usually 8000).
 
 (Optional) Start a live-reloading server for development:
 
-   ```bash
+   ```
 npm run server   # or yarn server
+ ```
+
 Use code with caution.
 content_copy
 This will use Nodemon to automatically restart the server whenever you make changes to your code.
@@ -75,7 +79,7 @@ The API endpoints are documented below. You can use tools like Postman or curl t
 1. User Authentication:
 
 # Endpoint: /api/users/ (POST)
-   ```bash
+   ```
 JSON
 {
     "username": "your_username",
@@ -151,5 +155,4 @@ content_copy
  **Endpoint:** `/api/questions/user/<user_id>` (GET)
 
  **Response:**
-
- ```json
+ - all questions and their answers for this user
