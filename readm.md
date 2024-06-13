@@ -35,7 +35,7 @@ Configuration
 
 # Create a file named .env in your project's root directory. This file should contain the following environment variables (replace with your actual values):
 
-   ```bash
+```bash
 ACCESS_TOKEN_SECRET=your_secret_key
 MONGO_URI=mongodb://your_mongo_connection_string
 GEMINI_API_KEY=your_google_cloud_api_key
