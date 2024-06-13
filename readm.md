@@ -14,7 +14,11 @@ This project provides a backend API for a question-answering system powered by G
 - A Google Cloud project with the Generative AI API enabled. You can follow Google's instructions for setting up Generative AI https://ai.google/(https://ai.google.dev/api/rest).
 
 ## postman 
-You can check all endpoints on postman collection here: https://gold-station-10834.postman.co/workspace/New-Team-Workspace~46fbd9e8-67e2-4ff6-89db-43af6b23ca5a/collection/22671779-5f960941-cb43-4d73-84e2-73a4c1fc87e8?action=share&creator=22671779
+You can check and try all endpoints on postman collection here: https://gold-station-10834.postman.co/workspace/New-Team-Workspace~46fbd9e8-67e2-4ff6-89db-43af6b23ca5a/collection/22671779-5f960941-cb43-4d73-84e2-73a4c1fc87e8?action=share&creator=22671779
+
+postman documentation: 
+https://documenter.getpostman.com/view/22671779/2sA3XPEP9f
+
 ## Installation
 
 1. Clone this repository:
