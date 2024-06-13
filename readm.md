@@ -19,3 +19,135 @@ This project provides a backend API for a question-answering system powered by G
 
    ```bash
    git clone [https://github.com/your-username/faiz-mohammad-answersai-backend.git](https://github.com/your-username/faiz-mohammad-answersai-backend.git)
+
+2. Navigate to the project directory:
+
+    ```bash
+    cd faiz-mohammad-answersai-backend
+
+3- Install dependencies:
+
+   ```bash
+   npm i
+
+Configuration
+## 1. Environment Variables:
+
+# Create a file named .env in your project's root directory. This file should contain the following environment variables (replace with your actual values):
+
+   ```bash
+ACCESS_TOKEN_SECRET=your_secret_key
+MONGO_URI=mongodb://your_mongo_connection_string
+GEMINI_API_KEY=your_google_cloud_api_key
+Important:
+
+ACCESS_TOKEN_SECRET: A secret key used for signing JWT tokens for user authentication. Choose a strong and unique key.
+MONGO_URI: The connection string for your MongoDB database.
+GEMINI_API_KEY: Your Google Cloud API key for accessing the Generative AI service.
+Note: You can exclude the .env file from version control using tools like .gitignore.
+
+## 2. MongoDB Database:
+
+Set up a MongoDB database instance and configure the MONGO_URI environment variable accordingly.
+
+Running the Application
+Start the development server:
+
+   ```bash
+npm start   # or yarn start
+Use code with caution.
+content_copy
+This will start the Node.js server and listen for incoming requests on the default port (usually 8000).
+
+(Optional) Start a live-reloading server for development:
+
+   ```bash
+npm run server   # or yarn server
+Use code with caution.
+content_copy
+This will use Nodemon to automatically restart the server whenever you make changes to your code.
+
+API Usage
+The API endpoints are documented below. You can use tools like Postman or curl to send requests to the server.
+
+1. User Authentication:
+
+# Endpoint: /api/users/ (POST)
+   ```bash
+JSON
+{
+    "username": "your_username",
+    "password": "your_password"
+}
+
+
+# Endpoint: /api/users/login (POST)
+
+Request Body:
+
+   ```bash
+JSON
+{
+    "username": "your_username",
+    "password": "your_password"
+}
+
+
+Response:
+
+JSON
+{
+    "token": "your_jwt_token"
+}
+
+Upon successful login, the server returns a JWT token that you'll need to include in subsequent requests that require authentication.
+
+2. Submit a Question:
+
+Endpoint: /api/questions (POST)
+
+Request Headers:
+
+Authorization: Bearer <your_jwt_token>
+Request Body:
+
+JSON
+{
+    "question": "your_question"
+}
+Use code with caution.
+content_copy
+Response:
+
+JSON
+{
+    "_id": "question_id",
+    "user_id": "user_id",
+    "content": "your_question",
+    "answer": "ai_generated_answer",
+    "createdAt": "timestamp"
+}
+Use code with caution.
+content_copy
+3. Retrieve Questions:
+
+- All questions:
+
+ **Endpoint:** `/api/questions` (GET)
+
+ **Response:**
+
+ ```json
+ [
+     { ...question1 object ... },
+     { ...question2 object ... },
+     ...
+ ]
+ ```
+- User's questions:
+
+ **Endpoint:** `/api/questions/user/<user_id>` (GET)
+
+ **Response:**
+
+ ```json
