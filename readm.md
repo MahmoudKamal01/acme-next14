@@ -35,11 +35,11 @@ Configuration
 
 # Create a file named .env in your project's root directory. This file should contain the following environment variables (replace with your actual values):
 
-```bash
-ACCESS_TOKEN_SECRET=your_secret_key
-MONGO_URI=mongodb://your_mongo_connection_string
-GEMINI_API_KEY=your_google_cloud_api_key
-Important:
+   ```bash
+   ACCESS_TOKEN_SECRET=your_secret_key
+   MONGO_URI=mongodb://your_mongo_connection_string
+   GEMINI_API_KEY=your_google_cloud_api_key
+   Important:
 
 ACCESS_TOKEN_SECRET: A secret key used for signing JWT tokens for user authentication. Choose a strong and unique key.
 MONGO_URI: The connection string for your MongoDB database.
